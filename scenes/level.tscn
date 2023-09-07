@@ -1,11 +1,12 @@
-[gd_scene load_steps=16 format=3 uid="uid://c0dy4nem7b3yk"]
+[gd_scene load_steps=17 format=3 uid="uid://c0dy4nem7b3yk"]
 
-[ext_resource type="Texture2D" uid="uid://ddh8ga3mbk17w" path="res://assets/flappy-bird-assets-master/sprites/background-day.png" id="1_d6npe"]
+[ext_resource type="Texture2D" uid="uid://dmsuscnxaond7" path="res://assets/flappy-bird-assets-master/sprites/background-night.png" id="1_nk2of"]
 [ext_resource type="PackedScene" uid="uid://blfbnp85g42dd" path="res://scenes/pipe.tscn" id="2_2jn8m"]
 [ext_resource type="Texture2D" uid="uid://d21muxcunf0he" path="res://assets/flappy-bird-assets-master/sprites/bluebird-upflap.png" id="2_ipd2b"]
 [ext_resource type="Script" path="res://scripts/player.gd" id="2_q8bbo"]
 [ext_resource type="Texture2D" uid="uid://cdjo7wyjxxgpk" path="res://assets/flappy-bird-assets-master/sprites/bluebird-midflap.png" id="3_r48y3"]
 [ext_resource type="Texture2D" uid="uid://cumavg3lw2jvg" path="res://assets/flappy-bird-assets-master/sprites/bluebird-downflap.png" id="4_74bnb"]
+[ext_resource type="Texture2D" uid="uid://bi8xggsxi2bgg" path="res://assets/light.png" id="7_dr1ak"]
 [ext_resource type="Texture2D" uid="uid://ia82wfpnkkmm" path="res://assets/flappy-bird-assets-master/sprites/base.png" id="7_uf7jv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f5enl"]
@@ -77,10 +78,10 @@ animations = [{
 
 [node name="level" type="Node2D"]
 
-[node name="Background-day" type="Sprite2D" parent="."]
-position = Vector2(581, 325)
-scale = Vector2(4.03819, 1.25977)
-texture = ExtResource("1_d6npe")
+[node name="Background-night" type="Sprite2D" parent="."]
+position = Vector2(579, 300.5)
+scale = Vector2(4.00694, 1.16211)
+texture = ExtResource("1_nk2of")
 
 [node name="Ground" type="Area2D" parent="."]
 position = Vector2(585, 643)
@@ -125,6 +126,10 @@ libraries = {
 position = Vector2(39, 21.5)
 scale = Vector2(1, 1.125)
 sprite_frames = SubResource("SpriteFrames_pvaue")
+
+[node name="PointLight2D" type="PointLight2D" parent="Player"]
+shadow_enabled = true
+texture = ExtResource("7_dr1ak")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 follow_viewport_enabled = true
