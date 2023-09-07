@@ -13,11 +13,18 @@ config_version=5
 config/name="FlappyBird"
 run/main_scene="res://scenes/level.tscn"
 config/features=PackedStringArray("4.1", "Mobile")
+boot_splash/bg_color=Color(0.141176, 0.141176, 0.141176, 1)
 config/icon="res://assets/flappy-bird-assets-master/screenshot.png"
+boot_splash/minimum_display_time=3000
 
 [display]
 
 window/size/viewport_width=707
+window/size/resizable=false
+
+[filesystem]
+
+import/blender/enabled=false
 
 [rendering]
 
